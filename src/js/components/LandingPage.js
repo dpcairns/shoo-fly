@@ -23,7 +23,7 @@ class LandingPage extends React.Component{
 
       return(
       <div className="container">
-        <h1>Landing page</h1>
+        <h1>Gate finder</h1>
           <FlightForm findAllFlights={findAllFlights} />
           <ul>
           {gateNodes}

@@ -27,12 +27,12 @@ class FlightFormRedux extends Component {
           <fieldset className='form-group'>
             <label htmlFor='airport'>Which airport?</label> <label className='text-danger'>{airportErrorMsg}</label>
             <input maxLength="3" type='text' className='form-control' id='airport'
-              placeholder='What is the three-letter code for your airport' {...airport} required=''/>
+              placeholder='Enter the three-letter code for your airport (for example, LAX or PDX)' {...airport} required=''/>
           </fieldset>
           <fieldset className='form-group'>
-        <label htmlFor='hour'>Hour</label> <label className='text-danger'>{hourErrorMsg}</label>
+        <label htmlFor='hour'>Around what hour?</label> <label className='text-danger'>{hourErrorMsg}</label>
         <input type='number' className='form-control' id='hour'
-          placeholder='What hour of the day (0-24) are you interested in?' {...hour} required=''/>
+          placeholder='Enter the hour of the day (0-24) are you interested in' {...hour} required=''/>
       </fieldset>
           <button type='submit' className='btn btn-primary btn-block' disabled={submitting}>Find flights
             {submitting ? <span className='loader glyphicon glyphicon-refresh spin'></span>

@@ -27711,7 +27711,7 @@
 	        _react2.default.createElement(
 	          "h1",
 	          null,
-	          "Landing page"
+	          "Gate finder"
 	        ),
 	        _react2.default.createElement(_FlightForm2.default, { findAllFlights: findAllFlights }),
 	        _react2.default.createElement(
@@ -27869,7 +27869,7 @@
 	              airportErrorMsg
 	            ),
 	            _react2.default.createElement('input', _extends({ maxLength: '3', type: 'text', className: 'form-control', id: 'airport',
-	              placeholder: 'What is the three-letter code for your airport' }, airport, { required: '' }))
+	              placeholder: 'Enter the three-letter code for your airport (for example, LAX or PDX)' }, airport, { required: '' }))
 	          ),
 	          _react2.default.createElement(
 	            'fieldset',
@@ -27877,7 +27877,7 @@
 	            _react2.default.createElement(
 	              'label',
 	              { htmlFor: 'hour' },
-	              'Hour'
+	              'Around what hour?'
 	            ),
 	            ' ',
 	            _react2.default.createElement(
@@ -27886,7 +27886,7 @@
 	              hourErrorMsg
 	            ),
 	            _react2.default.createElement('input', _extends({ type: 'number', className: 'form-control', id: 'hour',
-	              placeholder: 'What hour of the day (0-24) are you interested in?' }, hour, { required: '' }))
+	              placeholder: 'Enter the hour of the day (0-24) are you interested in' }, hour, { required: '' }))
 	          ),
 	          _react2.default.createElement(
 	            'button',
