@@ -27675,12 +27675,12 @@
 	      var flights = _props.flights;
 
 	      var gateNodes = [];
-	      flights.length > 0 ? gateNodes = flights.map(function (item) {
+	      flights.length > 0 ? gateNodes = flights.map(function (item, index) {
 	        if (item.airportResources !== undefined) {
 	          if (item.airportResources.arrivalGate !== undefined) {
 	            return _react2.default.createElement(
 	              "li",
-	              null,
+	              { key: index },
 	              "Flight ",
 	              item.flightNumber,
 	              " (airline code: ",
@@ -27694,7 +27694,7 @@
 	          } else {
 	            return _react2.default.createElement(
 	              "li",
-	              null,
+	              { key: index },
 	              "no arrival gate info available for flight ",
 	              item.flightNumber,
 	              " (airline code: ",
@@ -27776,9 +27776,7 @@
 	        type: 'FETCH_FLIGHTS',
 	        payload: json.flightStatuses
 	      });
-	    }).catch(function (response) {
-	      console.log(response);
-	    });
+	    }).catch(function (response) {});
 	  });
 	};
 

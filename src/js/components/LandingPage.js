@@ -10,13 +10,13 @@ class LandingPage extends React.Component{
         let gateNodes = []
           flights.length > 0 ?
           gateNodes =
-                  flights.map(function(item)
+                  flights.map(function(item, index)
                   {
                   if (item.airportResources !== undefined) {
                     if (item.airportResources.arrivalGate !== undefined){
-                          return <li>Flight {item.flightNumber} (airline code: {item.carrierFsCode}) arrives at gate {item.airportResources.arrivalGate} at {item.arrivalDate.dateLocal.slice(11, 16)} </li>
+                          return <li key={index}>Flight {item.flightNumber} (airline code: {item.carrierFsCode}) arrives at gate {item.airportResources.arrivalGate} at {item.arrivalDate.dateLocal.slice(11, 16)} </li>
                         }
-                        else{return <li>no arrival gate info available for flight {item.flightNumber} (airline code: {item.carrierFsCode}) </li>}
+                        else{return <li key={index}>no arrival gate info available for flight {item.flightNumber} (airline code: {item.carrierFsCode}) </li>}
                       }
                         }) :
         gateNodes = []

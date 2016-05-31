@@ -21,7 +21,6 @@ export const findAllFlights = (flightInfo, dispatch) => {
   )
 })
   .catch(function (response) {
-    console.log(response);
   });
 })
 }
